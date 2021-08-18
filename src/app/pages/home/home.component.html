@@ -1,0 +1,8 @@
+<div class="page">
+    <movie-transition-home [movieTransition]="movieTransition" *ngIf="movieTransition != null"></movie-transition-home>
+    <section class="lists">
+        <list-row [category]="item" *ngFor="let item of movieList"></list-row>
+    </section>
+
+</div>
+<loading-sc [show]="showLoading"></loading-sc>

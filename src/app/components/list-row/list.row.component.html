@@ -1,0 +1,21 @@
+<div class="movieRow">
+    <h2>{{category.title}}</h2>
+    <div class="movieRow--left" (click)="handleLeftArrow()">
+        <mat-icon style="font-size: 50;">keyboard_arrow_left</mat-icon>
+    </div>
+    <div class="movieRow--right" (click)="handleRightArrow()">
+        <mat-icon style="font-size: 50;">keyboard_arrow_right</mat-icon>
+    </div>
+    <div class="movieRow--listarea">
+        <div class="movieRow--list" [style.width.px]="category.items.results.length * 150"
+            [style.marginLeft.px]="scrollX">
+
+            <div class="movieRow--item" *ngFor="let item of category.items.results">
+                <img src="https://image.tmdb.org/t/p/w300/{{item.poster_path}}" alt="{{item.original_title}}" />
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
