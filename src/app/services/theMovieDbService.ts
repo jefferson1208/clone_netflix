@@ -7,7 +7,7 @@ import { Injectable } from "@angular/core";
 export class theMovieDbService {
 
     API_BASE = 'https://api.themoviedb.org/3';
-    API_KEY = 'eb2fff7b96fd8b582fed5d771f4c7277';
+    API_KEY = 'SUA_API_KEY_AQUI';
 
     basicFetch = async (endpoint) => {
         const req = await fetch(`${this.API_BASE}${endpoint}`);
